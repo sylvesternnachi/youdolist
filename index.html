@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" />
+    <title>YouDoList -  Your No1 Todo List App</title>
+</head>
+<body>
+
+    <div id="contain" class="container">
+
+         <div class="row">
+
+            <div class="col"></div>
+
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                <div class="todo-main-body">
+
+                    <div class="logo-div">
+                        <img src="img/logo.png">
+                    </div>
+
+                    <div class="formBox">
+                        <form class="form">
+
+                                <div class=" mb-3">
+                                     <input type="input" class="form-control form-control-lg inputfield" id="textinput" placeholder="Add New Tasks" >
+                                    <button class="btn submitBtn" type="submit" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short submitIcon" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+</svg>
+                                    </button>
+
+                                   
+                                    
+    <div class="priority-container">
+    <span class="priority-label">Select priority</span>
+
+    <div class="priority-options">
+        <div class="priority-btn 1">
+            <span class="dot"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+</svg>
+            </span>
+            High
+        </div>
+
+        <div class="priority-btn 2">
+            <span class="dot"> 
+               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16" style="margin-top: -2%;">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+</svg>
+            </span>
+            Medium
+        </div>
+
+        <div class="priority-btn 3">
+           <span class="dot"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
+</svg>
+            </span>
+            Low
+        </div>
+
+        
+    </div>
+</div>
+
+
+
+
+                                 </div>
+
+
+
+                            <!-- <input type="input" class="form-control form-control-lg inputfield" id="textinput" placeholder="Add New Tasks" > -->
+                        </form>
+                    </div>
+                    
+
+                    <div class="filter-item">
+
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search searchIcon" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        
+                        <input
+                        type="text"
+                        class="form-input-filter"
+                        id="filter-items"
+                        placeholder="Filter Items"
+                        />
+
+                    </div>
+
+                      <div class="empty-state">
+                            <div class="emptyimg">
+                            <img src="img/defaultImg.png" /> 
+                            </div>
+                            <h3 align="center">No Todo tasks at <br />the moment</h3>
+                        </div>
+
+                        <div class="noresult">
+                            <div class="noresultimg">
+                                <img src="img/stackImg2.svg" /> 
+                            </div>
+                            <h4 align="center"><img src="img/logoicon.svg"> task was found</h4>
+                        </div>
+
+                        <!-- UL and Lis-->
+                         <ul id="high-items-list" class="high-items-list">
+                            
+                            <button type="button" class="btn high-tag">
+                                High <span class="badge badge-high">4</span>
+                            </button>
+
+                            <!-- <li class="item High">
+                                <input type="checkbox" class="checkbox">
+                                
+                                Reading
+
+                                <div class="removeIcon">
+                                    <img src="img/close-circle.svg" class="removeimg">
+                                </div>
+                                
+                            </li>
+
+                            
+                                
+                           -->
+
+                        
+
+                         </ul>
+
+                         <ul id="medium-items-list" class="medium-items-list">
+
+                              <button type="button" class="btn medium-tag">
+                                Medium <span class="badge badge-medium">2</span>
+                            </button>
+
+                         </ul>
+
+                            <ul id="low-items-list" class="low-items-list">
+
+                                <button type="button" class="btn low-tag">
+                                Low <span class="badge badge-low">2</span>
+                            </button>
+
+                         </ul>
+
+
+
+                </div>
+                <div class="body-footer">
+                    <p align="center"> Design & Develop by <span> <img src="img/avatar.png" class="avatar"> Sylvester Nnachi</span></p>
+                </div>
+            </div>
+
+           <div class="col"></div>
+
+         </div>
+
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</html>
